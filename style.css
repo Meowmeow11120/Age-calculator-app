@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 86%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: auto;
+    border-radius: 20px 20px 200px 20px;
+    padding: 30px 50px;
+    width: 650px;
+    height: 500px;
+
+}
+
+#form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(0, 1%, 44%);
+    margin-bottom: 10px;
+}
+
+input {
+    font-weight: 700;
+    padding: 0px 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#form div span {
+    display: none;
+    color: hsl(0, 100%, 67%);
+    font-size: 14px;
+}
+
+button {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+    border: hsl(0, 0%, 8%) 1px solid;
+    cursor: pointer;
+}
+
+button:hover {
+    background: hsl(0, 0%, 8%);
+    transition: ease-in 100ms;
+}
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.divider::before {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background-color: hsl(0, 1%, 44%);
+}
+
+
+
+.box {
+    text-transform: uppercase;
+    font-size: 32px;
+    height: 60px;
+    width: 130px;
+    text-align: start;
+    border-radius: 10px;
+    border: hsl(0, 1%, 44%) solid 1px;
+}
+
+.timecontainer {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 80px;
+
+}
+
+.color {
+    color: hsl(259, 100%, 65%);
+}
+
+
+
+@media only screen and (max-width: 375px) {
+    .container {
+        background-color: hsl(0, 0%, 100%);
+        width: auto;
+        border-radius: 20px 20px 100px 20px;
+        padding: 10px 15px;
+        width: 90%;
+        height: 50%;
+    }
+
+    #form {
+        gap: 10px;
+    }
+
+    .box {
+        text-transform: uppercase;
+        font-size: 24px;
+        height: 60px;
+        width: 90px;
+        text-align: start;
+        border-radius: 10px;
+        border: hsl(0, 1%, 44%) solid 1px;
+    }
+
+    input {
+        padding: 0px 0px 0px 10px;
+
+    }
+
+    .divider button {
+        display: inline;
+        margin: 10px 0;
+        transform: translateX(-135px);
+
+    }
+
+
+
+
+    .timecontainer {
+        margin-top: 30px;
+        font-size: 62px;
+        font-weight: 800;
+        line-height: 60px;
+    }
+}
