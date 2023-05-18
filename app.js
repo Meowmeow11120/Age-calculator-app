@@ -7,6 +7,7 @@ const yeartotal = document.querySelector('.yeartotal');
 const form = document.querySelector('#form');
 const warning = document.querySelectorAll('#warning');
 const box = document.querySelectorAll('.box');
+const btn = document.querySelector('.btn')
 
 function getDateDifference(endDay, endMonth, endYear) {
     // Convert the end date to a Date object
@@ -36,17 +37,18 @@ function getDateDifference(endDay, endMonth, endYear) {
     };
 }
 
-form.addEventListener('change', () => {
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
     if (day.value === '' || month.value === '' || year.value === '') {
         warning.forEach((e, index) => {
             yeartotal.textContent = `--`;
             monthtotal.textContent = `--`;
             daytotal.textContent = `--`;
             e.style.display = 'block';
-            e.textContent = `Must be a valid ${e.getAttribute('data-field')}`;
+            e.textContent = `This field is required`;
             box[index].style.border = '1px solid hsl(0, 100%, 67%)';
         });
-    } else if (day.value > '30' || month.value > '12' || year.value > `${new Date().getFullYear()}`) {
+    } else if (day.value > 30 || month.value > 12 || year.value > `${new Date().getFullYear()}`) {
         warning.forEach((e, index) => {
             yeartotal.textContent = `--`;
             monthtotal.textContent = `--`;
@@ -54,6 +56,7 @@ form.addEventListener('change', () => {
             e.style.display = 'block';
             e.textContent = `Must be a valid ${e.classList}`;
             box[index].style.border = '1px solid hsl(0, 100%, 67%)';
+            console.log(warning[index])
         });
     }
     else {
