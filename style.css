@@ -83,6 +83,7 @@ button:hover {
 
 
 
+
 .box {
     text-transform: uppercase;
     font-size: 32px;
@@ -136,14 +137,22 @@ button:hover {
     }
 
     .divider button {
-        display: inline;
         margin: 10px 0;
-        transform: translateX(-135px);
 
     }
+    .divider::before {
+        content: '';
+        height: 1px;
+        flex: 1;
+        background-color: hsl(0, 1%, 44%);
+    }
 
-
-
+    .divider::after {
+        content: '';
+        height: 1px;
+        flex: 1;
+        background-color: hsl(0, 1%, 44%);
+    }
 
     .timecontainer {
         margin-top: 30px;
