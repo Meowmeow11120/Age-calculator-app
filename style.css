@@ -17,6 +17,10 @@ body {
     overflow: hidden;
 }
 
+.date {
+    display: flex;
+    gap: 20px;
+}
 
 .container {
     background-color: hsl(0, 0%, 100%);
@@ -30,7 +34,7 @@ body {
 
 #form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -140,6 +144,7 @@ button:hover {
         margin: 10px 0;
 
     }
+
     .divider::before {
         content: '';
         height: 1px;

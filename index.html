@@ -29,29 +29,32 @@
 
 
     <form action="/dayset" id="form">
-      <div>
-        <label for="day">Day</label><br>
-        <input type="text" id="day" class="box" name="day" value="24"><br>
-        <span id="warning" class="day">This field is required</span>
+      <div class="date">
+        <div>
+          <label for="day">Day</label><br>
+          <input type="text" id="day" class="box" name="day" value="24"><br>
+          <span id="warning" class="day">This field is required</span>
+        </div>
+
+        <div>
+          <label for="month">Month</label><br>
+          <input type="text" id="month" class="box" name="month" value="09"><br>
+          <span id="warning" class="month">This field is required</span>
+        </div>
+
+        <div>
+          <label for="year">Day</label><br>
+          <input type="text" id="year" class="box" name="year" value="1984"><br>
+          <span id="warning" class="year">This field is required</span>
+
+        </div>
       </div>
-
-      <div>
-        <label for="month">Month</label><br>
-        <input type="text" id="month" class="box" name="month" value="09"><br>
-        <span id="warning" class="month">This field is required</span>
-      </div>
-
-      <div>
-        <label for="year">Day</label><br>
-        <input type="text" id="year" class="box" name="year" value="1984"><br>
-        <span id="warning" class="year">This field is required</span>
-
+      <div class="divider">
+        <button class="btn"><img src="./assets/images/icon-arrow.svg" alt="button"></button>
       </div>
     </form>
 
-    <div class="divider">
-      <button><img src="./assets/images/icon-arrow.svg" alt="button"></button>
-    </div>
+
 
     <div class="timecontainer">
       <i> <span class="color text yeartotal"> 38</span> years <br>
